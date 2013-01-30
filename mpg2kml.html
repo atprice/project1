@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<script language="JavaScript">
+
+function mpgConvert()
+{
+var form = document.forms[0];
+
+var mpg = form.mpg1.value;
+var kml = mpg / 2.35215;
+
+form.kml1.value = kml;
+}    
+
+function kmlConvert()
+{
+var form = document.forms[0];
+
+var kml = form.kml2.value;
+var mpg = kml / .425144
+
+form.mpg2.value=mpg;
+}
+</script>
+</head>
+
+<body bgcolor=#FFFFFF>
+
+<form name=f>
+
+MPG to Km/L:<br>
+<input type=text name=mpg1 value=""> <input type=text name=kml1 value=""> <input type=button value=convert onclick="JavaScript:mpgConvert()">
+<br><br>
+Km/L to MPG:<br>
+<input type=text name=kml2 value=""> <input type=text name=mpg2 value=""> <input type=button value=convert onclick="JavaScript:kmlConvert()">
+</form>
+
+
+</body>
+
+</html>
